@@ -308,6 +308,8 @@ The facilitator MUST submit the transaction only to the Xahau network identified
 
 The destination amount is `tx_json.Amount`. If it is missing, the facilitator MUST reject.
 
+`DeliverMax` is the name xahaud's JSON API v2 uses for `Amount`; it is not a separate binary field. The signed blob only contains `Amount`, so decoding it with the Xahau binary codec always yields `Amount`.
+
 #### XAH Amount Rules
 
 If `paymentRequirements.asset == "XAH"`:
